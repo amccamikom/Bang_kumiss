@@ -6,6 +6,7 @@ Bot sederhana untuk membantu member AMCC
 2. Ambil API bot telegramnya
 3. Install Ruby
 4. Install Library telegram-bot
+
     gem install telegram-bot-ruby
     
 
