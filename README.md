@@ -1,15 +1,17 @@
 # Bang_kumiss
 Bot sederhana untuk membantu member AMCC
 
-<b>Persiapan</b>
+### Persiapan
 1. Buat bot pada BotFather
 2. Ambil API bot telegramnya
 3. Install Ruby
-4. Install Library telegram-bot
+4. Copy `.env.sample` menjadi `.env` dan sesuaikan token API bot
+5. Install Library yang diperlukan
+```shell
+$ gem install dotenv telegram-bot-ruby
+```
 
-    gem install telegram-bot-ruby
-    
-
-<b>Menjalankan Bot</b>
-
-ruby namafile.rb
+### Menjalankan Bot
+```shell
+$ ruby namafile.rb
+```
