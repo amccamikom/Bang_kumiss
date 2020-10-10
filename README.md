@@ -1,8 +1,10 @@
 # Bang_kumiss
-Bot sederhana untuk membantu member AMCC
+Bot sederhana untuk membantu member AMCC yang dibangun dalam bahasa Ruby.
 
 ### Persiapan
-1. Buat bot pada BotFather https://t.me/botfather. Caranya dapat dibaca di dokumentasi https://core.telegram.org/bots#6-botfather
+1. Buat bot pada BotFather
+- Tambahkan akun BotFather https://t.me/botfather
+- Ikuti step pada dokumentasi BotFather https://core.telegram.org/bots#6-botfather
 2. Ambil token API bot telegramnya
 3. Install Ruby
 4. Copy `.env.sample` menjadi `.env` dan sesuaikan token API bot
@@ -16,6 +18,13 @@ $ gem install dotenv telegram-bot-ruby
 $ ruby namafile.rb
 ```
 
+### Directory Structure
+Bang_kumiss
+|-- bot                             # Bot folder
+|   |-- .env.sample                 # .env setting for Telegram Bot API
+|   |-- bot                         # Bot Program
+
+
 ### Tech Stack
-Ruby
-Telegram Bot API
+- Ruby
+- Telegram Bot API
