@@ -5,31 +5,31 @@ token = ENV['BOT_TOKEN']
 Telegram::Bot::Client.run(token) do |bot|
   bot.listen do |message|
     case message.text
-    when '/start@kumiss_bot'
+    when '/start@kumiss_bot', '/start'
       bot.api.send_message(chat_id: message.chat.id, text: "
       Halooo selamat datang di AMCC jangan lupa pantengin web kita amcc.or.id yah, ada banyak info menarik seputar amcc di sana
       ========================
 Informasi command yang tersedia kunjungi /help
 jika informasi kurang jelas bisa menghubungi Mimin Ayeee... ^_^
      ")
-    when '/pelatihan@kumiss_bot'
+    when '/pelatihan@kumiss_bot', '/pelatihan'
       bot.api.send_message(chat_id: message.chat.id, text: "sabar yak, pelatihan di infokan setelah firstmeet")
     when '/firstmeetkumiss_bot'
       bot.api.send_message(chat_id: message.chat.id, text: 
       "
         Cek IG @amccamikom yah, semua info ada disana...
       ")
-     when '/status@kumiss_bot'
+     when '/status@kumiss_bot', '/status'
       bot.api.send_message(chat_id: message.chat.id, text: 
       "
         Cieeeee yang kepo status ... 
       ")
-     when '/info@kumiss_bot'
+     when '/info@kumiss_bot', '/info'
       bot.api.send_message(chat_id: message.chat.id, text: 
       "
         Bot masih dalam pengembangan, lamanya respon dikarenakan server yang masih lokal... 
       ")
-      when '/lagiapa@kumiss_bot'
+      when '/lagiapa@kumiss_bot', '/lagiapa'
       bot.api.send_message(chat_id: message.chat.id, text: 
       "
         Lagi ngantuk nih, pengen bobo.. 
@@ -65,7 +65,7 @@ jika informasi kurang jelas bisa menghubungi Mimin Ayeee... ^_^
         Iya ini udah bangung 
       ")
       
-      when '/help@kumiss_bot'
+      when '/help@kumiss_bot', '/help'
       bot.api.send_message(chat_id: message.chat.id, text: 
       "
         Daftar Perintah Chatbot
@@ -76,7 +76,7 @@ jika informasi kurang jelas bisa menghubungi Mimin Ayeee... ^_^
     /lokasifirstmeet - untuk melihat lokasi firstmeet
     /info - untuk informasi pengembangan chatbot  
       ")
-    when '/lokasifirstmeet@kumiss_bot'
+    when '/lokasifirstmeet@kumiss_bot', '/lokasifirstmeet'
       bot.api.send_location(chat_id: message.chat.id, latitude: -7.759356, longitude: 110.408348)
     end
   end
