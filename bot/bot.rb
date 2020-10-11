@@ -62,7 +62,7 @@ jika informasi kurang jelas bisa menghubungi Mimin Ayeee... ^_^
       when 'bangun'
       bot.api.send_message(chat_id: message.chat.id, text: 
       "
-        Iya ini udah bangung 
+        Iya ini udah bangun 
       ")
       
       when '/help@kumiss_bot', '/help'
