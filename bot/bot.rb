@@ -7,7 +7,7 @@ Telegram::Bot::Client.run(token) do |bot|
     case message.text
     when '/start@kumiss_bot', '/start'
       bot.api.send_message(chat_id: message.chat.id, text: "
-      Halooo selamat datang di AMCC jangan lupa pantengin web kita amcc.or.id yah, ada banyak info menarik seputar amcc di sana
+      Halooo #{message.from.first_name}! selamat datang di AMCC jangan lupa pantengin web kita amcc.or.id yah, ada banyak info menarik seputar amcc di sana
       ========================
 Informasi command yang tersedia kunjungi /help
 jika informasi kurang jelas bisa menghubungi Mimin Ayeee... ^_^
@@ -79,5 +79,18 @@ jika informasi kurang jelas bisa menghubungi Mimin Ayeee... ^_^
     when '/lokasifirstmeet@kumiss_bot', '/lokasifirstmeet'
       bot.api.send_location(chat_id: message.chat.id, latitude: -7.759356, longitude: 110.408348)
     end
+    when Telegram::Bot::Types::CallbackQuery
+     if message.data == 'help'
+       bot.api.send_message(chat_id: message.from.id, text: "/help")
+     end
+   when Telegram::Bot::Types::Message
+     kb = [
+       Telegram::Bot::Types::InlineKeyboardButton.new(text: 'Amcc Website', url: 'https://amcc.or.id/'),
+       Telegram::Bot::Types::InlineKeyboardButton.new(text: 'ITC (Introduction To Computer)', url: 'https://itc.amcc.or.id/'),
+       Telegram::Bot::Types::InlineKeyboardButton.new(text: 'Help', callback_data: 'help'),
+     ]
+     markup = Telegram::Bot::Types::InlineKeyboardMarkup.new(inline_keyboard: kb)
+     bot.api.send_message(chat_id: message.chat.id, text: 'List Bantuan', reply_markup: markup)
+   end
   end
 end
