@@ -7,10 +7,12 @@ Telegram::Bot::Client.run(token) do |bot|
     case message.text
     when '/start@kumiss_bot', '/start'
       bot.api.send_message(chat_id: message.chat.id, text: "
-      Halooo #{message.from.first_name}! selamat datang di AMCC jangan lupa pantengin web kita amcc.or.id yah, ada banyak info menarik seputar amcc di sana
+      Hai #{message.from.first_name}! 
+      Selamat datang! Kenalin aku bot dari AMCC. Kami merupakan UKM yang bergerak dalam bidang keilmuan. Seketariat AMCC beralamat di Gedung BSC Lantai 2 Universitas Amikom Yogyakarta jalan Ring Road Utara Sleman, Yogyakarta. Sedangkan untuk Camp AMCC beralamat di jalan plosokuning raya No. 88, Minomartani, Ngaglik, Sleman, Yogyakarta. AMCC secara resmi menjadi UKM pada tanggal 6 Mei 1996.
       ========================
+Mau tau info menarik tentang kami? visit:  https://amcc.or.id/
 Informasi command yang tersedia kunjungi /help
-jika informasi kurang jelas bisa menghubungi Mimin Ayeee... ^_^
+Jika informasi kurang jelas bisa menghubungi amcc bot yaaa ^_^
      ")
     when '/pelatihan@kumiss_bot', '/pelatihan'
       bot.api.send_message(chat_id: message.chat.id, text: "sabar yak, pelatihan di infokan setelah firstmeet")
@@ -19,7 +21,7 @@ jika informasi kurang jelas bisa menghubungi Mimin Ayeee... ^_^
     when '/firstmeetkumiss_bot'
       bot.api.send_message(chat_id: message.chat.id, text: 
       "
-        Cek IG @amccamikom yah, semua info ada disana...
+        Cek IG @amccamikom yap, buat kamu yg aktif IGan
       ")
      when '/status@kumiss_bot', '/status'
       bot.api.send_message(chat_id: message.chat.id, text: 
