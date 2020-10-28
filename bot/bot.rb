@@ -14,6 +14,8 @@ jika informasi kurang jelas bisa menghubungi Mimin Ayeee... ^_^
      ")
     when '/pelatihan@kumiss_bot', '/pelatihan'
       bot.api.send_message(chat_id: message.chat.id, text: "sabar yak, pelatihan di infokan setelah firstmeet")
+ when '/amccmerch@kumiss_bot', '/amccmerch'
+      bot.api.send_message(chat_id: message.chat.id, text: "silahkan kaka informasi lebih detail mengenai merchandise bisa dilihat di  IG @amcc.store ...")
     when '/firstmeetkumiss_bot'
       bot.api.send_message(chat_id: message.chat.id, text: 
       "
@@ -74,6 +76,7 @@ jika informasi kurang jelas bisa menghubungi Mimin Ayeee... ^_^
     /pelatihan - untuk melihat jadwal pelatihan
     /firstmeet - untuk melihat info terkini firstmeet
     /lokasifirstmeet - untuk melihat lokasi firstmeet
+    /amccmerch - untuk melihat official merchandise amcc 
     /info - untuk informasi pengembangan chatbot  
       ")
     when '/lokasifirstmeet@kumiss_bot', '/lokasifirstmeet'
